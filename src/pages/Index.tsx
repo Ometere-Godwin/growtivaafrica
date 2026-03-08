@@ -1,12 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import CategoriesSection from "@/components/CategoriesSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="container flex items-center justify-between h-16">
+          <span className="font-display font-bold text-xl tracking-tight">
+            DRIVE <span className="text-gold">AFRICA</span>
+          </span>
+          <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+            <a href="#stories" className="hover:text-foreground transition-colors">Stories</a>
+            <a href="#advertise" className="hover:text-foreground transition-colors">Advertise</a>
+            <a href="#about" className="hover:text-foreground transition-colors">About</a>
+          </div>
+        </div>
+      </nav>
+
+      <HeroSection />
+      <CategoriesSection />
+
+      {/* Footer */}
+      <footer className="py-12 bg-surface-dark text-muted-foreground">
+        <div className="container text-center space-y-3">
+          <p className="font-display font-bold text-gold text-lg">DRIVE AFRICA</p>
+          <p className="text-sm opacity-70">A Production of Swiftpixels Creative Studios</p>
+          <p className="text-xs opacity-50">&copy; {new Date().getFullYear()} Drive Africa. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };
