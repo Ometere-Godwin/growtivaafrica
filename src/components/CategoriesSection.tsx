@@ -59,7 +59,31 @@ const CategoryCard = ({ category, index }: { category: typeof categories[0]; ind
                   {category.description}
                 </p>
               </div>
-            </div>
+    </div>
+  );
+};
+
+const CategoriesSection = () => {
+  const { ref: headingRef, isVisible: headingVisible } = useScrollAnimate(0.2);
+
+  return (
+    <section className="py-24 bg-surface-light">
+      <div className="container">
+        <div
+          ref={headingRef}
+          className={`text-center max-w-2xl mx-auto mb-16 space-y-4 transition-all duration-700 ease-out ${headingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        >
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+            Stories That Move Africa <span className="text-gold">Forward</span>
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Growtiva Africa explores the realities, ambitions, and opportunities shaping modern African life.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categories.map((category, index) => (
+            <CategoryCard key={category.title} category={category} index={index} />
           ))}
         </div>
       </div>
