@@ -18,7 +18,7 @@ const SignUp = () => {
       return;
     }
     setSubmitted(true);
-    toast.success("Welcome to Drive Africa!");
+    toast.success("Welcome to Growtiva Africa!");
   };
 
   return (
