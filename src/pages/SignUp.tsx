@@ -53,7 +53,7 @@ const SignUp = () => {
           <div className="w-full max-w-md space-y-8 animate-fade-up">
             <div className="text-center space-y-2">
               <h1 className="text-3xl md:text-4xl font-bold font-display">
-                Join Drive <span className="text-gold">Africa</span>
+                Join Growtiva <span className="text-gold">Africa</span>
               </h1>
               <p className="text-muted-foreground">
                 Get access to stories, insights, and opportunities shaping modern African life.

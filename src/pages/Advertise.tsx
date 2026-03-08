@@ -62,7 +62,7 @@ const Advertise = () => {
           <div className="w-full max-w-lg space-y-8 animate-fade-up">
             <div className="text-center space-y-2">
               <h1 className="text-3xl md:text-4xl font-bold font-display">
-                Advertise with Drive <span className="text-gold">Africa</span>
+                Advertise with Growtiva <span className="text-gold">Africa</span>
               </h1>
               <p className="text-muted-foreground">
                 Put your brand in front of ambitious Africans. Fill in your details and we'll be in touch.

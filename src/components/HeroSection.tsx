@@ -35,7 +35,7 @@ const HeroSection = () => {
             </div>
 
             <p className="text-base text-muted-foreground leading-relaxed max-w-lg">
-              Drive Africa is a modern African media platform spotlighting ambition, opportunity, culture, and growth. We tell stories that inspire action and connect ambitious Africans with ideas, businesses, and opportunities that move them forward.
+              Growtiva Africa is a modern African media platform spotlighting ambition, opportunity, culture, and growth. We tell stories that inspire action and connect ambitious Africans with ideas, businesses, and opportunities that move them forward.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">

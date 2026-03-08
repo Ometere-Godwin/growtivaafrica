@@ -41,7 +41,7 @@ const CategoriesSection = () => {
             Stories That Move Africa <span className="text-gold">Forward</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Drive Africa explores the realities, ambitions, and opportunities shaping modern African life.
+            Growtiva Africa explores the realities, ambitions, and opportunities shaping modern African life.
           </p>
         </div>
 

@@ -24,9 +24,9 @@ const Index = () => {
       {/* Footer */}
       <footer className="dark py-12 bg-surface-dark text-muted-foreground">
         <div className="container text-center space-y-3">
-          <p className="font-display font-bold text-gold text-lg">DRIVE AFRICA</p>
+          <p className="font-display font-bold text-gold text-lg">GROWTIVA AFRICA</p>
           <p className="text-sm text-foreground opacity-70">A Production of Swiftpixels Creative Studios</p>
-          <p className="text-xs text-foreground opacity-50">&copy; {new Date().getFullYear()} Drive Africa. All rights reserved.</p>
+          <p className="text-xs text-foreground opacity-50">&copy; {new Date().getFullYear()} Growtiva Africa. All rights reserved.</p>
         </div>
       </footer>
     </div>
