@@ -56,7 +56,7 @@ const About = () => {
             The Story Behind <span className="text-gold">Growtiva Africa</span>
           </h1>
           <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
-            We're more than a magazine. We're a movement — built to amplify the voices, ambitions, and lived experiences of young Africans everywhere.
+            We're more than a magazine. We're a movement — built to amplify the voices, ambitions, and lived experiences of business and growth focused Africans everywhere.
           </p>
         </div>
       </section>
