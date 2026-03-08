@@ -12,7 +12,7 @@ const Index = () => {
           </span>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#stories" className="hover:text-foreground transition-colors">Stories</a>
-            <a href="#advertise" className="hover:text-foreground transition-colors">Advertise</a>
+            <a href="/advertise" className="hover:text-foreground transition-colors">Advertise</a>
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
           </div>
         </div>
