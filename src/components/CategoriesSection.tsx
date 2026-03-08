@@ -9,6 +9,7 @@ import {
   Shield,
   Sparkles,
 } from "lucide-react";
+import { useScrollAnimate } from "@/hooks/use-scroll-animate";
 
 import categoryMoney from "@/assets/category-money.jpg";
 import categoryTravel from "@/assets/category-travel.jpg";
