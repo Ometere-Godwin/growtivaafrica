@@ -8,7 +8,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-16">
           <span className="font-display font-bold text-xl tracking-tight">
-            DRIVE <span className="text-gold">AFRICA</span>
+            GROWTIVA <span className="text-gold">AFRICA</span>
           </span>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#stories" className="hover:text-foreground transition-colors">Stories</a>
