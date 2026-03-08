@@ -24,7 +24,7 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 space-y-6">
             <div className="space-y-2">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                Drive <span className="text-gold">Africa</span>
+                Growtiva <span className="text-gold">Africa</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
                 A Digital Lifestyle &amp; Business Community Magazine Powered by Storytelling and Advertising.
