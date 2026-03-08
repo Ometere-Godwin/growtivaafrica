@@ -22,7 +22,7 @@ const Index = () => {
       <CategoriesSection />
 
       {/* Footer */}
-      <footer className="py-12 bg-surface-dark text-muted-foreground">
+      <footer className="dark py-12 bg-surface-dark text-muted-foreground">
         <div className="container text-center space-y-3">
           <p className="font-display font-bold text-gold text-lg">DRIVE AFRICA</p>
           <p className="text-sm text-foreground opacity-70">A Production of Swiftpixels Creative Studios</p>
