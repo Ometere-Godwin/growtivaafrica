@@ -35,9 +35,9 @@ const LatestIssueSection = () => {
           ref={headingRef}
           className={`text-center max-w-2xl mx-auto mb-16 space-y-4 transition-all duration-700 ease-out ${headingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent-foreground text-sm font-medium mb-2">
-            <BookOpen className="w-4 h-4 text-gold" />
-            <span className="text-gold">Issue #01 — Premier Edition</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-medium mb-2">
+            <BookOpen className="w-4 h-4" />
+            <span>Issue #01 — Premier Edition</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Peek Inside the <span className="text-gold">Latest Issue</span>
