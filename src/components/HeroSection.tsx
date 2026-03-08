@@ -9,7 +9,7 @@ const HeroSection = () => {
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimate(0.1);
 
   return (
-    <section className="min-h-screen flex items-center bg-background overflow-hidden">
+    <section className="min-h-screen flex items-center bg-background overflow-hidden pt-20 lg:pt-0">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Magazine Mockup */}
