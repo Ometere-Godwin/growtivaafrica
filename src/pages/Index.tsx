@@ -22,7 +22,7 @@ const Index = () => {
       <CategoriesSection />
 
       {/* Footer */}
-      <footer className="dark py-12 bg-surface-dark text-muted-foreground">
+      <footer id="about" className="dark py-12 bg-surface-dark text-muted-foreground scroll-mt-16">
         <div className="container text-center space-y-3">
           <p className="font-display font-bold text-gold text-lg">GROWTIVA AFRICA</p>
           <p className="text-sm text-foreground opacity-70">A Production of Swiftpixels Creative Studios</p>
