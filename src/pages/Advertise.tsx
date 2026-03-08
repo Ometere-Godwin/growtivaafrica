@@ -38,7 +38,7 @@ const Advertise = () => {
           <button onClick={() => navigate("/")} className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-4 h-4" />
             <span className="font-display font-bold text-lg tracking-tight">
-              DRIVE <span className="text-gold">AFRICA</span>
+              GROWTIVA <span className="text-gold">AFRICA</span>
             </span>
           </button>
         </div>
