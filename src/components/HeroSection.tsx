@@ -1,5 +1,6 @@
 import magazineMockup from "@/assets/magazine-mockup.png";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   return (
