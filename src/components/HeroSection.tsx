@@ -1,15 +1,22 @@
 import magazineMockup from "@/assets/magazine-mockup.png";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useScrollAnimate } from "@/hooks/use-scroll-animate";
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const { ref: mockupRef, isVisible: mockupVisible } = useScrollAnimate(0.1);
+  const { ref: contentRef, isVisible: contentVisible } = useScrollAnimate(0.1);
+
   return (
     <section className="min-h-screen flex items-center bg-background overflow-hidden">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Magazine Mockup */}
-          <div className="flex justify-center lg:justify-start order-2 lg:order-1">
+          <div
+            ref={mockupRef}
+            className={`flex justify-center lg:justify-start order-2 lg:order-1 transition-all duration-700 ease-out ${mockupVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}
+          >
             <div className="relative">
               <div className="absolute -inset-10 bg-accent/10 rounded-full blur-3xl" />
               <img
@@ -21,7 +28,10 @@ const HeroSection = () => {
           </div>
 
           {/* Right - Content */}
-          <div className="order-1 lg:order-2 space-y-6">
+          <div
+            ref={contentRef}
+            className={`order-1 lg:order-2 space-y-6 transition-all duration-700 delay-200 ease-out ${contentVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
+          >
             <div className="space-y-2">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
                 Growtiva <span className="text-gold">Africa</span>
