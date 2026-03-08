@@ -6,7 +6,6 @@ import LatestIssueSection from "@/components/LatestIssueSection";
 import NewsletterSection from "@/components/NewsletterSection";
 
 const navLinks = [
-  { href: "#stories", label: "Stories" },
   { href: "/advertise", label: "Advertise" },
   { href: "/about", label: "About" },
 ];
