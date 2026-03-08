@@ -52,7 +52,7 @@ const Advertise = () => {
             </div>
             <h2 className="text-3xl font-bold font-display">Inquiry Received!</h2>
             <p className="text-muted-foreground">
-              Thank you for your interest in advertising with Drive Africa. Our team will get back to you shortly.
+              Thank you for your interest in advertising with Growtiva Africa. Our team will get back to you shortly.
             </p>
             <Button variant="gold" onClick={() => navigate("/")} className="px-8">
               Back to Home
