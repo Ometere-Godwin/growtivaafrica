@@ -8,7 +8,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 const navLinks = [
   { href: "#stories", label: "Stories" },
   { href: "/advertise", label: "Advertise" },
-  { href: "#about", label: "About" },
+  { href: "/about", label: "About" },
 ];
 
 const Index = () => {
