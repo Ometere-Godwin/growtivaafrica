@@ -41,8 +41,9 @@ const Index = () => {
               className="p-2 text-foreground"
               aria-label="Toggle menu"
             >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}
