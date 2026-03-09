@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 import HeroSection from "@/components/HeroSection";
 import CategoriesSection from "@/components/CategoriesSection";
 import LatestIssueSection from "@/components/LatestIssueSection";
