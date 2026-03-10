@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import HeroSection from "@/components/HeroSection";
 import CategoriesSection from "@/components/CategoriesSection";
@@ -66,8 +66,22 @@ const Index = () => {
 
       {/* Footer */}
       <footer id="about" className="dark py-12 bg-surface-dark text-muted-foreground scroll-mt-16">
-        <div className="container text-center space-y-3">
+        <div className="container text-center space-y-5">
           <p className="font-display font-bold text-gold text-lg">GROWTIVA AFRICA</p>
+          <div className="flex items-center justify-center gap-5">
+            <a href="https://instagram.com/growtivaafrica" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-gold transition-colors" aria-label="Instagram">
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a href="https://twitter.com/growtivaafrica" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-gold transition-colors" aria-label="X / Twitter">
+              <Twitter className="w-5 h-5" />
+            </a>
+            <a href="https://linkedin.com/company/growtivaafrica" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-gold transition-colors" aria-label="LinkedIn">
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a href="https://facebook.com/growtivaafrica" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-gold transition-colors" aria-label="Facebook">
+              <Facebook className="w-5 h-5" />
+            </a>
+          </div>
           <p className="text-sm text-foreground opacity-70">A Production of Swiftpixels Creative Studios</p>
           <p className="text-xs text-foreground opacity-50">&copy; {new Date().getFullYear()} Growtiva Africa. All rights reserved.</p>
         </div>
