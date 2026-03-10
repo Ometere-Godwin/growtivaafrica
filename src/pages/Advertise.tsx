@@ -42,6 +42,7 @@ const Advertise = () => {
               GROWTIVA <span className="text-gold">AFRICA</span>
             </span>
           </button>
+          <ThemeToggle />
         </div>
       </nav>
 
