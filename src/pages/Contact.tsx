@@ -1,26 +1,14 @@
-import { useState } from "react";
 import { ArrowLeft, Send, Mail, MessageSquare } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
+import { useFormHandlers } from "@/hooks/use-form-handlers";
 
 const Contact = () => {
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitting(true);
-    
-    // Simulate submission
-    await new Promise((r) => setTimeout(r, 1000));
-    
-    toast.success("Message sent! We'll get back to you soon.");
-    (e.target as HTMLFormElement).reset();
-    setSubmitting(false);
-  };
+  const { handleContactSubmit, forms } = useFormHandlers();
+  const submitting = forms.contact.loading;
 
   return (
     <div className="min-h-screen bg-background">
@@ -91,13 +79,13 @@ const Contact = () => {
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="md:col-span-3 space-y-5">
+            <form onSubmit={handleContactSubmit} className="md:col-span-3 space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label htmlFor="full_name" className="text-sm font-medium">Name</label>
+                  <label htmlFor="name" className="text-sm font-medium">Name</label>
                   <Input
-                    id="full_name"
-                    name="full_name"
+                    id="name"
+                    name="name"
                     placeholder="Your name"
                     required
                   />

@@ -4,6 +4,7 @@ import {
   FormResponse,
   AdvertRequest,
   Profile,
+  ContactMessage,
 } from "../types/forms";
 
 /**
@@ -65,4 +66,13 @@ export const submitSignUp = async (
   data: Profile,
 ): Promise<FormResponse<Profile>> => {
   return await performInsert<Profile>("profiles", data);
+};
+
+/**
+ * Submit a contact message.
+ */
+export const submitContactMessage = async (
+  data: ContactMessage,
+): Promise<FormResponse<ContactMessage>> => {
+  return await performInsert<ContactMessage>("contact", data);
 };

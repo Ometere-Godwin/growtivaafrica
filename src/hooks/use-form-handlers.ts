@@ -4,11 +4,13 @@ import {
   subscribeToNewsletter,
   submitAdvertRequest,
   submitSignUp,
+  submitContactMessage,
 } from "../api/forms";
 import {
   Subscriber,
   AdvertRequest,
   Profile,
+  ContactMessage,
 } from "../types/forms";
 
 /**
@@ -24,6 +26,9 @@ export const useFormHandlers = (
     onSuccess?.("advert", data),
   );
   const signUpForm = useForm<Profile>((data) => onSuccess?.("signup", data));
+  const contactForm = useForm<ContactMessage>((data) =>
+    onSuccess?.("contact", data),
+  );
 
   /** 1. Newsletter Subscribe Handler */
   const handleNewsletterSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
@@ -69,14 +74,25 @@ export const useFormHandlers = (
     });
   };
 
+  /** 4. Contact Message Handler */
+  const handleContactSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
+    contactForm.handleSubmission(e, {
+      apiCall: submitContactMessage,
+      requiredFields: ["name", "email", "message"],
+      successMessage: "Message sent! We have received your query.",
+    });
+  };
+
   return {
     handleNewsletterSubmit,
     handleAdvertSubmit,
     handleSignUpSubmit,
+    handleContactSubmit,
     forms: {
       newsletter: newsletterForm,
       advert: advertForm,
       signup: signUpForm,
+      contact: contactForm,
     },
   };
 };
