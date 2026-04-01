@@ -53,7 +53,7 @@ const StatsSection = () => {
           {stats.map((stat) => (
             <div key={stat.label} className="space-y-3">
               <div className="w-12 h-12 mx-auto rounded-full bg-primary-foreground/10 flex items-center justify-center">
-                <stat.icon className="w-5 h-5 text-gold" />
+                <stat.icon className="w-5 h-5 text-gold dark:text-primary-foreground" />
               </div>
               <p className="text-3xl md:text-4xl font-display font-bold tracking-tight">
                 <AnimatedNumber target={stat.value} suffix={stat.suffix} isVisible={isVisible} />
