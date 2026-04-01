@@ -53,11 +53,11 @@ const LatestIssueSection = () => {
         >
           {/* Page Spread Viewer */}
           <div className="lg:col-span-3 space-y-4">
-            <div className="relative rounded-lg overflow-hidden border border-border shadow-xl bg-card aspect-[3/2]">
+            <div className="relative rounded-lg overflow-hidden border border-border shadow-xl bg-card aspect-[3/2] p-3 md:p-4">
               <img
                 src={spreads[currentSpread]}
                 alt={`Issue spread ${currentSpread + 1}`}
-                className="w-full h-full object-cover transition-opacity duration-500"
+                className="w-full h-full object-contain transition-opacity duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent pointer-events-none" />
             </div>
