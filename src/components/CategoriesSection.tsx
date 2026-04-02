@@ -48,7 +48,7 @@ const CategoryCard = ({ category, index }: { category: typeof categories[0]; ind
                   alt={category.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                
                 <div className="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-accent/90 flex items-center justify-center">
                   <category.icon className="w-5 h-5 text-accent-foreground" />
                 </div>
