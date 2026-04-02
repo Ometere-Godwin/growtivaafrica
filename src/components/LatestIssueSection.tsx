@@ -53,7 +53,7 @@ const LatestIssueSection = () => {
         >
           {/* Page Spread Viewer */}
           <div className="lg:col-span-3 space-y-4">
-            <div className="relative rounded-lg overflow-hidden border border-border shadow-xl bg-card aspect-[3/2] p-3 md:p-4">
+            <div className="relative rounded-lg overflow-hidden border border-border shadow-xl bg-card aspect-[16.535/11.693] p-3 md:p-4">
               <img
                 src={spreads[currentSpread]}
                 alt={`Issue spread ${currentSpread + 1}`}
