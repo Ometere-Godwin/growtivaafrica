@@ -81,6 +81,12 @@ const LatestIssueSection = () => {
                 <ChevronRight className="w-5 h-5" />
               </Button>
             </div>
+
+            <div className="text-center">
+              <Button variant="gold" size="lg" className="rounded-full px-10" asChild>
+                <a href="/sign-up">Get Your Copy</a>
+              </Button>
+            </div>
           </div>
 
           {/* Table of Contents */}
