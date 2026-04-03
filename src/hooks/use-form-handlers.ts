@@ -68,9 +68,9 @@ export const useFormHandlers = (
   const handleSignUpSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     signUpForm.handleSubmission(e, {
       apiCall: submitSignUp,
-      requiredFields: ["full_name", "email", "password"],
+      requiredFields: ["full_name", "phone", "email"],
       successMessage:
-        "Welcome to Growtiva Africa! Your account has been created.",
+        "Welcome to Growtiva Africa! You have been signed up.",
     });
   };
 

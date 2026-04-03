@@ -63,6 +63,16 @@ const SignUp = () => {
                 />
               </div>
               <div className="space-y-2">
+                <Label htmlFor="phone">Phone Number</Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+234 800 000 0000"
+                  required
+                />
+              </div>
+              <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
@@ -72,19 +82,9 @@ const SignUp = () => {
                   required
                 />
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
-                <Input
-                  id="password"
-                  name="password"
-                  type="password"
-                  placeholder="••••••••"
-                  required
-                />
-              </div>
 
               <Button type="submit" variant="gold" size="lg" className="w-full text-base" disabled={isSubmitting}>
-                {isSubmitting ? "Creating Account..." : "Create Free Account"}
+                {isSubmitting ? "Signing Up..." : "Sign Up"}
               </Button>
             </form>
 
