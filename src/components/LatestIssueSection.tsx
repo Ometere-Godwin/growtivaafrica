@@ -39,6 +39,7 @@ const LatestIssueSection = () => {
             <BookOpen className="w-4 h-4" />
             <span>Issue #01 — Premier Edition</span>
           </div>
+          <p className="text-sm font-medium text-muted-foreground">Coming May 1st, 2026</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Peek Inside the <span className="text-gold">Latest Issue</span>
           </h2>
