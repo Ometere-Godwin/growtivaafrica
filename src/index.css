@@ -110,6 +110,9 @@
   .bg-surface-dark {
     background-color: hsl(var(--surface-dark));
   }
+  .bg-footer-bg {
+    background-color: hsl(var(--footer-bg));
+  }
   .bg-surface-light {
     background-color: hsl(var(--surface-light));
   }

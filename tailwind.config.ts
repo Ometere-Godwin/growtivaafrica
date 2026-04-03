@@ -26,6 +26,7 @@ export default {
         gold: "hsl(var(--gold))",
         "gold-dark": "hsl(var(--gold-dark))",
         "surface-dark": "hsl(var(--surface-dark))",
+        "footer-bg": "hsl(var(--footer-bg))",
         "surface-light": "hsl(var(--surface-light))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
