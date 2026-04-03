@@ -25,8 +25,8 @@ export interface AdvertRequest {
 export interface Profile {
   id?: string;
   full_name: string;
+  phone: string;
   email: string;
-  password?: string;
   created_at?: string;
 }
 
