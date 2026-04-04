@@ -45,7 +45,7 @@ const faqs = [
 ];
 
 const FAQSection = () => {
-  const sectionRef = useScrollAnimate();
+  const { ref: sectionRef } = useScrollAnimate();
 
   return (
     <section
