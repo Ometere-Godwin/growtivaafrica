@@ -34,7 +34,6 @@ const posts = [
     time: "1d ago",
   },
 ];
-];
 
 const SocialFeedSection = () => {
   const { ref: headingRef, isVisible: headingVisible } = useScrollAnimate(0.15);
