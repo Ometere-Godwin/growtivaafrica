@@ -7,6 +7,7 @@ import LatestIssueSection from "@/components/LatestIssueSection";
 import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
+import SocialFeedSection from "@/components/SocialFeedSection";
 
 const navLinks = [
   { href: "/advertise", label: "Advertise" },
