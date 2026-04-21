@@ -80,9 +80,7 @@
 // src/api/growtiva/forms.ts
 // Copy to your Growtiva frontend at: src/api/forms.ts
 
-const API_BASE = import.meta.env.DEV
-  ? "http://localhost:2000"
-  : "https://api.swiftpixelsstudio.com";
+const API_BASE = "https://api.swiftpixelsstudio.com";
 
 type ApiResponse = {
   success: boolean;
