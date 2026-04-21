@@ -103,7 +103,6 @@ const Admin = () => {
       type,
       id,
       status,
-      updates,
     }: {
       type: string;
       id: string;
