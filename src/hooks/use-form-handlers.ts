@@ -1,10 +1,10 @@
 import { SyntheticEvent } from "react";
 import { useForm } from "./use-form";
 import {
-  subscribeToNewsletter,
+  submitSubscriber,
   submitAdvertRequest,
-  submitSignUp,
-  submitContactMessage,
+  submitProfile,
+  submitContact,
 } from "../api/forms";
 import {
   Subscriber,
@@ -33,7 +33,7 @@ export const useFormHandlers = (
   /** 1. Newsletter Subscribe Handler */
   const handleNewsletterSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     newsletterForm.handleSubmission(e, {
-      apiCall: (data) => subscribeToNewsletter(data.email),
+      apiCall: (data) => submitSubscriber(data),
       requiredFields: ["email"],
       successMessage: "Thank you for subscribing to our newsletter!",
     });
@@ -67,17 +67,16 @@ export const useFormHandlers = (
   /** 3. Sign Up Handler */
   const handleSignUpSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     signUpForm.handleSubmission(e, {
-      apiCall: submitSignUp,
+      apiCall: submitProfile,
       requiredFields: ["full_name", "phone", "email"],
-      successMessage:
-        "Welcome to Growtiva Africa! You have been signed up.",
+      successMessage: "Welcome to Growtiva Africa! You have been signed up.",
     });
   };
 
   /** 4. Contact Message Handler */
   const handleContactSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     contactForm.handleSubmission(e, {
-      apiCall: submitContactMessage,
+      apiCall: submitContact,
       requiredFields: ["name", "email", "message"],
       successMessage: "Message sent! We have received your query.",
     });
