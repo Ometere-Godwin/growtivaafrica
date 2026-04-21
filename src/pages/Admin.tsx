@@ -42,8 +42,9 @@ import { SubscriberTable } from "@/components/admin/SubscriberTable";
 const Admin = () => {
   const { toast } = useToast();
   const queryClient = useQueryClient();
-  const [isAdminAuthenticated, setIsAdminAuthenticated] =
-    useState("swiftpixels@2026");
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
+    !!import.meta.env.VITE_ADMIN_SECRET,
+  );
   const [passwordInput, setPasswordInput] = useState("");
 
   // Queries
