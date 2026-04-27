@@ -46,6 +46,8 @@ import {
   Twitter,
   Linkedin,
   Facebook,
+  Eye,
+  EyeOff,
 } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -56,6 +58,7 @@ const Admin = () => {
     localStorage.getItem("admin_auth") === "true",
   );
   const [passwordInput, setPasswordInput] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   // Queries
   const statsQuery = useQuery({
@@ -178,13 +181,26 @@ const Admin = () => {
           </CardHeader>
           <CardContent>
             <form onSubmit={handleAuth} className="space-y-4">
-              <Input
-                type="password"
-                placeholder="Admin Secret"
-                value={passwordInput}
-                onChange={(e) => setPasswordInput(e.target.value)}
-                className="bg-muted/50 border-border/40 focus:border-gold/50 transition-colors"
-              />
+              <div className="relative">
+                <Input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Admin Secret"
+                  value={passwordInput}
+                  onChange={(e) => setPasswordInput(e.target.value)}
+                  className="bg-muted/50 border-border/40 focus:border-gold/50 transition-colors pr-10"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {showPassword ? (
+                    <EyeOff className="h-4 w-4" />
+                  ) : (
+                    <Eye className="h-4 w-4" />
+                  )}
+                </button>
+              </div>
               <Button
                 type="submit"
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-6"
