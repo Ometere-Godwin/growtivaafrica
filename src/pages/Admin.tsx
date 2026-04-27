@@ -38,14 +38,22 @@ import { CallTable } from "@/components/admin/CallTable";
 import { ContactTable } from "@/components/admin/ContactTable";
 import { SubscriberTable } from "@/components/admin/SubscriberTable";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Menu, X, Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
+import {
+  ArrowLeft,
+  Menu,
+  X,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Facebook,
+} from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const Admin = () => {
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
-    !!import.meta.env.VITE_ADMIN_SECRET,
+    localStorage.getItem("admin_auth") === "true",
   );
   const [passwordInput, setPasswordInput] = useState("");
 
@@ -143,8 +151,9 @@ const Admin = () => {
     e.preventDefault();
     if (passwordInput === import.meta.env.VITE_ADMIN_SECRET) {
       setIsAdminAuthenticated(true);
+      localStorage.setItem("admin_auth", "true");
     } else {
-      toast({ title: "Invalid Secret", variant: "destructive" });
+      toast({ title: "Not an Admin!", variant: "destructive" });
     }
   };
 
@@ -156,11 +165,13 @@ const Admin = () => {
         <Card className="w-full max-w-md border-border/40 shadow-2xl bg-card/50 backdrop-blur-sm">
           <CardHeader className="text-center">
             <div className="flex justify-center mb-4">
-               <span className="font-display font-bold text-2xl tracking-tight">
+              <span className="font-display font-bold text-2xl tracking-tight">
                 GROWTIVA <span className="text-gold">AFRICA</span>
               </span>
             </div>
-            <CardTitle className="text-2xl font-display font-bold">Admin Access</CardTitle>
+            <CardTitle className="text-2xl font-display font-bold">
+              Admin Access
+            </CardTitle>
             <CardDescription>
               Please enter your admin secret to continue.
             </CardDescription>
@@ -174,7 +185,10 @@ const Admin = () => {
                 onChange={(e) => setPasswordInput(e.target.value)}
                 className="bg-muted/50 border-border/40 focus:border-gold/50 transition-colors"
               />
-              <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-6">
+              <Button
+                type="submit"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-6"
+              >
                 Unlock Dashboard
               </Button>
             </form>
@@ -204,7 +218,9 @@ const Admin = () => {
             <span className="font-display font-bold text-xl tracking-tight">
               GROWTIVA <span className="text-gold">AFRICA</span>
             </span>
-            <span className="text-[10px] bg-gold/10 text-gold px-2 py-0.5 rounded-full font-bold tracking-widest uppercase">Admin</span>
+            <span className="text-[10px] bg-gold/10 text-gold px-2 py-0.5 rounded-full font-bold tracking-widest uppercase">
+              Admin
+            </span>
           </Link>
 
           {/* Desktop */}
@@ -268,15 +284,18 @@ const Admin = () => {
                 Dashboard <span className="text-gold">Control</span>
               </h1>
               <p className="text-muted-foreground max-w-md">
-                Monitor growth, manage requests, and track community engagement across the platform.
+                Monitor growth, manage requests, and track community engagement
+                across the platform.
               </p>
             </div>
-            <Button 
-              variant="outline" 
-              onClick={refreshData} 
+            <Button
+              variant="outline"
+              onClick={refreshData}
               className="w-fit border-gold/20 hover:border-gold/50 hover:bg-gold/5 transition-all gap-2 h-11 px-6 font-semibold"
             >
-              <RefreshCcw className={`h-4 w-4 ${statsQuery.isFetching ? 'animate-spin' : ''}`} /> 
+              <RefreshCcw
+                className={`h-4 w-4 ${statsQuery.isFetching ? "animate-spin" : ""}`}
+              />
               Sync Data
             </Button>
           </header>
@@ -286,34 +305,54 @@ const Admin = () => {
           <Tabs defaultValue="adverts" className="space-y-8 mt-10">
             <div className="relative">
               <TabsList className="bg-muted/50 w-full justify-start overflow-x-auto h-auto p-1 gap-1 border border-border/40 backdrop-blur-sm">
-                <TabsTrigger value="adverts" className="py-2.5 px-6 data-[state=active]:bg-background data-[state=active]:text-gold data-[state=active]:shadow-sm font-semibold transition-all">
+                <TabsTrigger
+                  value="adverts"
+                  className="py-2.5 px-6 data-[state=active]:bg-background data-[state=active]:text-gold data-[state=active]:shadow-sm font-semibold transition-all"
+                >
                   Advert Requests
                 </TabsTrigger>
-                <TabsTrigger value="profiles" className="py-2.5 px-6 data-[state=active]:bg-background data-[state=active]:text-gold data-[state=active]:shadow-sm font-semibold transition-all">
+                <TabsTrigger
+                  value="profiles"
+                  className="py-2.5 px-6 data-[state=active]:bg-background data-[state=active]:text-gold data-[state=active]:shadow-sm font-semibold transition-all"
+                >
                   User Profiles
                 </TabsTrigger>
-                <TabsTrigger value="contacts" className="py-2.5 px-6 data-[state=active]:bg-background data-[state=active]:text-gold data-[state=active]:shadow-sm font-semibold transition-all">
+                <TabsTrigger
+                  value="contacts"
+                  className="py-2.5 px-6 data-[state=active]:bg-background data-[state=active]:text-gold data-[state=active]:shadow-sm font-semibold transition-all"
+                >
                   Contact Inbox
                 </TabsTrigger>
-                <TabsTrigger value="subscribers" className="py-2.5 px-6 data-[state=active]:bg-background data-[state=active]:text-gold data-[state=active]:shadow-sm font-semibold transition-all">
+                <TabsTrigger
+                  value="subscribers"
+                  className="py-2.5 px-6 data-[state=active]:bg-background data-[state=active]:text-gold data-[state=active]:shadow-sm font-semibold transition-all"
+                >
                   Subscribers
                 </TabsTrigger>
               </TabsList>
             </div>
 
             <div className="animate-fade-up">
-              <TabsContent value="adverts" className="m-0 focus-visible:outline-none">
+              <TabsContent
+                value="adverts"
+                className="m-0 focus-visible:outline-none"
+              >
                 <ProjectTable
                   requests={advertsQuery.data?.data}
                   isLoading={advertsQuery.isLoading}
                   onUpdateStatus={(id, status) =>
                     updateStatusMutation.mutate({ type: "advert", id, status })
                   }
-                  onDelete={(id) => deleteMutation.mutate({ type: "advert", id })}
+                  onDelete={(id) =>
+                    deleteMutation.mutate({ type: "advert", id })
+                  }
                 />
               </TabsContent>
 
-              <TabsContent value="profiles" className="m-0 focus-visible:outline-none">
+              <TabsContent
+                value="profiles"
+                className="m-0 focus-visible:outline-none"
+              >
                 <CallTable
                   calls={profilesQuery.data?.data}
                   isLoading={profilesQuery.isLoading}
@@ -326,7 +365,10 @@ const Admin = () => {
                 />
               </TabsContent>
 
-              <TabsContent value="contacts" className="m-0 focus-visible:outline-none">
+              <TabsContent
+                value="contacts"
+                className="m-0 focus-visible:outline-none"
+              >
                 <ContactTable
                   contacts={contactsQuery.data?.data}
                   isLoading={contactsQuery.isLoading}
@@ -339,7 +381,10 @@ const Admin = () => {
                 />
               </TabsContent>
 
-              <TabsContent value="subscribers" className="m-0 focus-visible:outline-none">
+              <TabsContent
+                value="subscribers"
+                className="m-0 focus-visible:outline-none"
+              >
                 <SubscriberTable
                   subscribers={subscribersQuery.data?.data}
                   isLoading={subscribersQuery.isLoading}
@@ -401,7 +446,8 @@ const Admin = () => {
             A Production of Swiftpixels Creative Studios
           </p>
           <p className="text-xs text-foreground opacity-30">
-            &copy; {new Date().getFullYear()} Growtiva Africa. Admin Control Panel.
+            &copy; {new Date().getFullYear()} Growtiva Africa. Admin Control
+            Panel.
           </p>
         </div>
       </footer>
